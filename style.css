@@ -1,6 +1,390 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400..900&display=swap');
 
-*{
-    font-family: "DM Sans", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: #020618;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Header */
+.main-header {
+  background-color: #130f41;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 140px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: filter 0.3s;
+}
+
+.logo-container:hover {
+  filter: brightness(1.2);
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 25px rgba(79, 70, 229, 0.6);
+}
+
+.logo-text {
+  color: #eef2ff;
+  font-size: 20px;
+}
+
+/* Botões */
+.btn-primary {
+  background: linear-gradient(to bottom, #4f46e5, #1e1b4b);
+  border: 2px solid #4f46e5;
+  color: #eef2ff;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.2);
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  margin-top: 4rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding-top: 208px;
+  background-image: url('assets/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.gradient-hero {
+  background: linear-gradient(to bottom,
+      rgba(2, 6, 24, 0) 70%,
+      rgba(2, 6, 24, 1) 100%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.headline-container,
+.logo-container,
+.hero-description,
+.btn-large,
+.video-placeholder {
+  position: relative;
+  z-index: 3;
+}
+
+.logo-container {
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.headline-container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.headline.main {
+  position: relative;
+  z-index: 10;
+}
+
+.headline.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: blur(90px);
+  z-index: 5;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #a5b4fc;
+}
+
+.hero-description {
+  color: #9f9f9f;
+  font-size: 20px;
+  max-width: 1070px;
+  margin: 20px auto;
+}
+
+.video-placeholder {
+  width: 100%;
+  max-width: 1620px;
+  height: 715px;
+  background-color: #92400e;
+  margin: 10rem auto 2rem;
+  border-radius: 40px;
+}
+
+/* Seção de Dores */
+.pains-section {
+  padding: 6rem 140px;
+  background-color: #020618;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-weight: 400;
+}
+
+.number {
+  font-family: "Orbitron", sans-serif;
+  color: #E0E7FF;
+  opacity: 42%;
+  font-size: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.number:hover {
+  transform: translateX(10px);
+}
+
+.active {
+  border-left: #615FFF 6px solid;
+  padding-left: 12px;
+  color: #615FFF;
+  opacity: 100%;
+}
+
+.pains-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 180px;
+  justify-content: center;
+}
+
+.pains-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+  width: 660px;
+  height: 550px;
+  padding: 40px;
+  box-shadow: #24274C 0px 4px 16px, #24274C 0px 8px 24px;
+  border-radius: 40px;
+}
+
+.icon-pains {
+  font-weight: 900;
+  font-size: 180px;
+  color: #1b005e;
+}
+
+.title-pains {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.description-pains {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.comments {
+  margin-top: 70px;
+}
+
+.comment {
+  color: rgba(255, 255, 255, 0.641);
+  font-size: 18px;
+  font-weight: 300;
+  width: 780px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.comment-bold {
+  font-weight: 600;
+}
+
+/* Classes */
+.carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  position: absolute;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: 0.3s all ease;
+  /* transform: translateX(-500px); */
+}
+
+.carousel-item img{
+  transition: 0.3s all ease;
+}
+
+.carousel-item img:hover{
+  transform: scale(1.02);
+  animation: infinite 2s blinks;
+  cursor: pointer;
+}
+
+.arrows {
+  padding: 0 70px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.arrows button {
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.arrows button:hover {
+  transform: scale(1.1);
+}
+
+.button-carousel{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.carousel-gradient {
+  background: #020618;
+  background: linear-gradient(90deg, rgba(2, 6, 24, 1) 0%, rgba(2, 6, 24, 0) 25%, rgba(2, 6, 24, 0) 74%, rgba(2, 6, 24, 1) 100%);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* testimonials */
+
+.container-tes{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+
+.row .container{
+  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.11);
+  padding: 20px;
+  border-radius: 23px;
+  text-align: center;
+  width: 508px;
+}
+
+.row .container p{
+  margin-bottom: 8px;
+  color: #c5c5c5;
+}
+
+.perfil{
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.perfil img{
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.perfil h2{
+  font-weight: 700;
+  font-size: 16px;
+  color: #b09aff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blinks {
+  0%, 100%{
+    filter: brightness(1);
+  }
+  50%{
+    filter: brightness(1.4);
+  }
 }
