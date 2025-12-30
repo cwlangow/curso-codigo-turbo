@@ -57,10 +57,10 @@
 
         <div class="pains-container">
             <div class="numbers">
-                <p class="number active">01</p>
-                <p class="number">02</p>
-                <p class="number">03</p>
-                <p class="number">04</p>
+                <button class="number active" onclick="changeNum(1)">01</button>
+                <button class="number" onclick="changeNum(2)">02</button>
+                <button class="number" onclick="changeNum(3)">03</button>
+                <button class="number" onclick="changeNum(4)">04</button>
             </div>
 
             <div class="pains-content">
@@ -89,8 +89,8 @@
 
         <div class="carousel-container">
             <div class="arrows">
-                <button class="button-carousel"><img src="assets/arrow-left.png" alt="Seta Esquerda"></button>
-                <button class="button-carousel"><img src="assets/arrow-right.png" alt="Seta Direita"></button>
+                <button class="button-carousel arrow-left"><img src="assets/arrow-left.png" alt="Seta Esquerda"></button>
+                <button class="button-carousel arrow-right"><img src="assets/arrow-right.png" alt="Seta Direita"></button>
             </div>
 
             <div class="carousel-gradient"></div>
@@ -167,13 +167,15 @@
 
 
         <div class="cta">
-            <h2>Está na hora de sair do zero e começar a programar de verdade.</h2>
-            <p>Clique abaixo e comece agora no Código Turbo.</p>
+            <h1 class="headline cta-title">Está na hora de sair do zero e começar a programar de verdade.</h1>
+            <p class="hero-description cta-description">Clique abaixo e comece agora no Código Turbo.</p>
 
-            <button>Começar agora na programação</button>
+            <button class="btn-primary btn-large">Começar agora na programação</button>
         </div>
     </section>
-    </div>
-</body>
 
+    
+
+    <script src="script.js"></script>
+</body>
 </html>

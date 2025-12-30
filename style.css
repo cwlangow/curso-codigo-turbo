@@ -108,6 +108,10 @@ body {
 
 .logo-container {
   justify-content: center;
+  
+}
+
+.central{
   margin-bottom: 30px;
 }
 
@@ -170,6 +174,11 @@ body {
   font-weight: 400;
 }
 
+.numbers{
+  display: flex;
+  flex-direction: column;
+}
+
 .number {
   font-family: "Orbitron", sans-serif;
   color: #E0E7FF;
@@ -177,6 +186,11 @@ body {
   font-size: 48px;
   cursor: pointer;
   transition: all 0.2s ease;
+  background-color: transparent;
+  border: none;
+  border-left: 6px solid transparent;
+  padding-left: 12px;
+  text-align: start;
 }
 
 .number:hover {
@@ -208,23 +222,27 @@ body {
   padding: 40px;
   box-shadow: #24274C 0px 4px 16px, #24274C 0px 8px 24px;
   border-radius: 40px;
+  transition: all 0.2s ease;
 }
 
 .icon-pains {
   font-weight: 900;
   font-size: 180px;
   color: #1b005e;
+  transition: all 0.2s ease;
 }
 
 .title-pains {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 25px;
+  transition: all 0.2s ease;
 }
 
 .description-pains {
   font-weight: 300;
   font-size: 20px;
+  transition: all 0.2s ease;
 }
 
 .comments {
@@ -277,7 +295,7 @@ body {
 }
 
 .arrows {
-  padding: 0 70px;
+  padding: 0 20px;
   width: 100%;
   position: absolute;
   display: flex;
@@ -293,6 +311,7 @@ body {
   pointer-events: auto;
   transition: all 0.3s ease;
   cursor: pointer;
+  padding: 20px;
 }
 
 .arrows button:hover {
@@ -316,6 +335,13 @@ body {
 }
 
 /* testimonials */
+
+.testimonials{
+  margin-top: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.837), rgba(0, 0, 0, 0.215)), url("assets/background.png");
+  background-position: top;
+  background-size: cover;
+}
 
 .container-tes{
   display: flex;
@@ -366,6 +392,24 @@ body {
   font-weight: 700;
   font-size: 16px;
   color: #b09aff;
+}
+
+/* CTA */
+
+.cta{
+  text-align: center;
+  margin-top: 200px;
+  padding-bottom: 200px;
+}
+
+.cta-title{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 48px;
+}
+
+.cta-description{
+  font-size: 18px;
 }
 
 @keyframes fadeIn {
